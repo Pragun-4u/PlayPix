@@ -1,7 +1,32 @@
-# Getting Started with Create React App
+PlayPix - Your Personal Video Hub
+PlayPix is a web application that brings the magic of video sharing and streaming to your fingertips. Built using the YouTube API, PlayPix allows you to explore a vast library of videos, view video details, read comments, and even engage in a mock live chat experience. With dynamic data updates, caching, and debouncing, PlayPix provides a seamless and user-friendly video browsing experience similar to YouTube.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Table of Contents
+Features
+Demo
+Installation
+Usage
+Contributing
+License
+Features
+1. Dynamic Video Search
+PlayPix leverages caching and debouncing techniques to provide users with instant and smooth search results as they type in the search bar. No more waiting for search results to load; PlayPix keeps pace with your search queries.
 
+2. Video Details
+On the video watch page, users can access a wealth of information about the video they're watching, including:
+
+Video title
+Views count
+Likes count
+Description
+3. Comments Section
+Engage with the video's community by reading and posting comments on the video. Share your thoughts, ask questions, and connect with others who have watched the same content.
+
+4. Recommended Videos
+Discover new content effortlessly with PlayPix's recommended videos section. Based on your viewing history and preferences, PlayPix suggests similar videos that you might enjoy.
+
+5. Mock Live Chat
+Experience the excitement of a live chat while watching videos. PlayPix utilizes API polling behind the scenes to simulate a chatroom where users can interact with each other during video playback.
 ## Available Scripts
 
 In the project directory, you can run:
