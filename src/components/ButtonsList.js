@@ -1,6 +1,5 @@
 import React from "react";
 import Buttons from "./Buttons";
-import ConsoleHelper from "../Helper/ConsoleHelper";
 import { Link } from "react-router-dom";
 const List = [
   "All",

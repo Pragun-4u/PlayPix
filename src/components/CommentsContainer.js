@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Comment from "./Comment";
 import { useSearchParams } from "react-router-dom";
-import { YOUTUBE_COMMENT_API } from "../utils/constants";
 import convertNumber from "../Helper/convertNumber";
 
 const CommentsContainer = ({ statistics }) => {
@@ -12,7 +11,9 @@ const CommentsContainer = ({ statistics }) => {
   }, [searchParams.get("v")]);
 
   const getComments = async () => {
-    const data = await fetch(YOUTUBE_COMMENT_API + searchParams.get("v"));
+    const data = await fetch(
+      process.env.REACT_APP_YOUTUBE_COMMENT_API + searchParams.get("v")
+    );
     const json = await data.json();
 
     // console.log(json?.items);

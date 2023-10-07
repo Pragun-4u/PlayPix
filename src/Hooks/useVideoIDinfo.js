@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { YOUTUBE_VIDEOINFO_API } from "../utils/constants";
 
 const useVideoIDinfo = (videoID) => {
   const [videoInfo, setvideoInfo] = useState([]);
@@ -8,7 +7,9 @@ const useVideoIDinfo = (videoID) => {
   }, [videoID]);
 
   const getVideoInfo = async () => {
-    const data = await fetch(YOUTUBE_VIDEOINFO_API + videoID);
+    const data = await fetch(
+      process.env.REACT_APP_YOUTUBE_VIDEOINFO_API + videoID
+    );
     const json = await data.json();
     setvideoInfo(json?.items[0]);
   };

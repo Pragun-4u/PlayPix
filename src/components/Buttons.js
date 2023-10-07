@@ -1,5 +1,4 @@
 import React from "react";
-import ConsoleHelper from "../Helper/ConsoleHelper";
 
 const Buttons = ({ name }) => {
   // ConsoleHelper(name);

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu, toggleSuggestion } from "../utils/appSlice";
-import { YOUTUBE_SUGGESTION_API } from "../utils/constants";
 import { cacheResults } from "../utils/searchSlice";
 import { Link } from "react-router-dom";
 
@@ -31,7 +30,9 @@ const Head = () => {
 
   const getSearchSuggestions = async () => {
     console.log(searchQuery);
-    const data = await fetch(YOUTUBE_SUGGESTION_API + searchQuery);
+    const data = await fetch(
+      process.env.REACT_APP_YOUTUBE_SUGGESTION_API + searchQuery
+    );
     const json = await data.json();
     setSuggestions(json[1]);
     dispatch(

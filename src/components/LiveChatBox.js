@@ -6,29 +6,13 @@ import {
   RandomNameGenerator,
   getRandomComment,
 } from "../Helper/RandomNameMessageGenerator";
-import { useSearchParams } from "react-router-dom";
 
 const LiveChatBox = () => {
   const dispatch = useDispatch();
   const chatMessage = useSelector((store) => store.chat.chatMessages);
-  const [searchParam] = useSearchParams();
+
   const [liveMessage, setliveMessage] = useState("");
 
-  // useEffect(() => {
-  //   const clrInterval = setInterval(() => {
-  //     console.log("api call");
-  //     dispatch(
-  //       addMessage({
-  //         name: RandomNameGenerator(),
-  //         message: getRandomComment(),
-  //       })
-  //     );
-  //   }, 1500);
-
-  //   return () => {
-  //     clearInterval(clrInterval);
-  //   };
-  // }, []);
   useEffect(() => {
     const i = setInterval(() => {
       // API Polling

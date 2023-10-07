@@ -10,9 +10,9 @@ const useVideoSearchResult = () => {
   }, [searchParam]);
 
   const getVideoInfo = async () => {
-    console.log("API called");
     const data = await fetch(
-      YOUTUBE_SEARCH_LIST_API + searchParam.get("searchquery")
+      process.env.REACT_APP_YOUTUBE_SEARCH_LIST_API +
+        searchParam.get("searchquery")
     );
     const json = await data.json();
     setvideoInfo(json?.items);
