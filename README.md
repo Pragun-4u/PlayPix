@@ -26,11 +26,11 @@ On the video watch page, users can access a wealth of information about the vide
 
 ### 3. Comments Section
 
-Engage with the video's community by reading and posting comments on the video. Share your thoughts, ask questions, and connect with others who have watched the same content.
+Engage with the video's community by reading comments on the video. 
 
 ### 4. Recommended Videos
 
-Discover new content effortlessly with PlayPix's recommended videos section. Based on your viewing history and preferences, PlayPix suggests similar videos that you might enjoy.
+Discover new content effortlessly with PlayPix's recommended videos section. Based on your search Result, PlayPix suggests similar videos that you might enjoy.
 
 ### 5. Mock Live Chat
 
@@ -74,7 +74,7 @@ PlayPix is designed to be intuitive and user-friendly. Here's how to use some of
 - On the video watch page, you can see video details, comments, and related videos.
 
 3. **Comments Section:**
-- Engage with the video's community by posting and reading comments.
+- Engage with the video's community by reading comments.
 
 4. **Recommended Videos:**
 - Discover new content in the recommended videos section based on your preferences.
