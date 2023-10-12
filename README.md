@@ -8,7 +8,7 @@ PlayPix is a web application that brings the magic of video sharing and streamin
 - [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
-- 
+
 ## Features
 
 ### 1. Dynamic Video Search
