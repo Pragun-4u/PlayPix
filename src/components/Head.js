@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu, toggleSuggestion } from "../utils/appSlice";
 import { cacheResults } from "../utils/searchSlice";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Head = () => {
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
@@ -29,7 +29,7 @@ const Head = () => {
   }, [searchQuery]);
 
   const getSearchSuggestions = async () => {
-    console.log(searchQuery);
+    // console.log(searchQuery);
     const data = await fetch(
       process.env.REACT_APP_YOUTUBE_SUGGESTION_API + searchQuery
     );
@@ -78,15 +78,12 @@ const Head = () => {
             onFocus={() => {
               dispatch(toggleSuggestion(false));
             }}
-            // onBlur={() => {
-            //   setshowSuggestion(false);
-            // }}
           ></input>
 
           <button
             className="rounded-r-full
         "
-            // onClick={() => }
+            onClick={() => navigate("/results?searchquery=" + searchQuery)}
           >
             <img
               className="h-12 cursor-pointer border border-gray-400 bg-gray-100 rounded-r-full"
