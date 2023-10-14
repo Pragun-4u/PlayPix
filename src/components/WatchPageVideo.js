@@ -20,9 +20,10 @@ const WatchPageVideo = () => {
     dispatch(clearMenu());
   }, [SearchParams]);
   return (
-    <div className="mx-28 my-8 w-[52rem]">
+    //
+    <div className="">
       <iframe
-        className=" rounded-3xl"
+        className=" w-screen mx-auto h-72 md:h-[32rem]  mt-10 md:mx-24 md:mt-20 md:mb-3 md:w-[52rem] rounded-xl"
         width="900"
         height="500"
         src={
@@ -35,21 +36,21 @@ const WatchPageVideo = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;autoplay; encrypted-media"
         allowFullScreen
       ></iframe>
-      <div>
-        <h1 className="font-bold text-2xl px-4 pt-2">{snippet?.title}</h1>
+      <div className="md:mx-20">
+        <h1 className="font-bold md:text-2xl px-4 pt-2">{snippet?.title}</h1>
         <div className="flex px-4  flex-wrap">
           <img
-            className="h-10 w-10  mt-2 rounded-2xl"
+            className="h-10  md:w-10  mt-2 rounded-2xl"
             src={snippet?.thumbnails?.medium?.url}
           />
-          <h1 className="text-lg font-bold p-2">{snippet?.channelTitle}</h1>
+          <h1 className="md:text-lg font-bold p-2">{snippet?.channelTitle}</h1>
           {
-            <h1 className="pt-2 mx-5">
+            <h1 className="text-sm md:text-md pt-2 mx-5">
               Views: {convertNumber(statistics?.viewCount)}
             </h1>
           }
           {
-            <h1 className="pt-2 mx-5">
+            <h1 className="pt-2 text-sm md:text-md mx-5">
               Published On:{" "}
               {new Date(snippet?.publishedAt).toLocaleString(undefined, {
                 timeZone: "Asia/Kolkata",
@@ -73,18 +74,18 @@ const WatchPageVideo = () => {
                 />
               </svg>
 
-              <span className="mx-2">
+              <span className="mx-2 text-sm md:text-md">
                 {convertNumber(statistics?.likeCount)}
               </span>
             </span>
           }
         </div>
-        <div>
+        <div className="">
           {" "}
           {showDesc ? (
             <button
               onClick={() => setshowDesc(false)}
-              className="bg-gray-300 flex p-2 m-2 rounded-lg"
+              className=" text-sm md:text-md bg-gray-300 flex p-2 m-2 rounded-lg"
             >
               {" "}
               Hide description
@@ -106,7 +107,7 @@ const WatchPageVideo = () => {
           ) : (
             <button
               onClick={() => setshowDesc(true)}
-              className="bg-gray-300 p-2 m-2 flex rounded-lg"
+              className="bg-gray-300 p-2 m-2 text-sm md:text-md flex rounded-lg"
             >
               Show description
               <svg
@@ -127,7 +128,9 @@ const WatchPageVideo = () => {
           )}
           {showDesc && (
             <div className="bg-gray-100 p-2 rounded-lg shadow-lg mx-2">
-              <p className="   pt-2">{snippet?.localized?.description}</p>
+              <p className="  text-xs md:text-md  pt-2">
+                {snippet?.localized?.description}
+              </p>
               <p>
                 Tags:
                 {snippet?.tags.map((tag, index) => (

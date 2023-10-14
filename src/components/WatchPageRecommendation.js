@@ -12,7 +12,9 @@ const WatchPageRecommendation = () => {
 
   return (
     <>
-      <span className="text-lg px-8">Recommended Videos</span>
+      <h1 className="md:text-left md:ml-5 text-lg my-3 text-center font-bold">
+        Recommended Videos.
+      </h1>
       {SearchResultPage.length !== 0
         ? SearchResultPage?.map((video) => (
             <Link key={video?.id?.videoId} to={"?v=" + video?.id?.videoId}>

@@ -22,10 +22,10 @@ const CommentsContainer = ({ statistics }) => {
 
   return (
     <>
-      <div className=" font-bold text-xl mx-2 mb-4 mt-9">
+      <div className="md:mx-20 font-bold text-xl mx-2 mb-4 mt-9">
         Comments : {convertNumber(statistics?.commentCount)}
       </div>
-      <div className=" bg-gray-100 w-full rounded-lg ">
+      <div className=" md:mx-20 md:w-4/5 bg-gray-100 w-full rounded-lg ">
         {comments.map((eachcomment) => (
           <Comment
             key={eachcomment?.id}

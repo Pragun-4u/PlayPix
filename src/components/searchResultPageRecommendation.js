@@ -14,9 +14,7 @@ const SearchResultPageRecommendation = ({ info }) => {
 
   return (
     <div
-      className={`p-2 m-2 bg-gray-200 shadow-xl rounded-lg hover:bg-transparent ${
-        isMenuOpen ? "w-72" : "w-56 ml-5"
-      }`}
+      className={` p-2 my-4 bg-gray-200 shadow-xl rounded-lg hover:bg-transparent w-screen md:w-72`}
     >
       <img
         alt="thumbnail"
