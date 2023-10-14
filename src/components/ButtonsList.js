@@ -15,12 +15,14 @@ const List = [
 ];
 const ButtonsList = () => {
   return (
-    <div className="flex flex-wrap ml-5">
-      {List.map((item, index) => (
-        <Link key={index} to={"/results?searchquery=" + item}>
-          <Buttons name={item} />
-        </Link>
-      ))}
+    <div className="mt-16 ">
+      <div className=" flex items-center justify-start md:justify-center  flex-wrap ml-5 m-auto">
+        {List.map((item, index) => (
+          <Link key={index} to={"/results?searchquery=" + item}>
+            <Buttons name={item} />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

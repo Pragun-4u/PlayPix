@@ -18,7 +18,7 @@ const VideoCard = ({ info }) => {
   return (
     <div
       className={`p-2 m-2 bg-gray-200 shadow-xl rounded-lg hover:bg-transparent ${
-        isMenuOpen ? "w-72" : "w-52 ml-5"
+        isMenuOpen ? " md:relative md:left-32 md:w-72" : "md:w-52 md:ml-5"
       }`}
     >
       <img

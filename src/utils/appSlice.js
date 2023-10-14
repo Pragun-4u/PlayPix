@@ -13,8 +13,8 @@ const appSlice = createSlice({
     clearMenu: (state, action) => {
       state.isMenuOpen = action.payload;
     },
-    toggleSuggestion: (state) => {
-      state.showSuggestion = !state.showSuggestion;
+    toggleSuggestion: (state, action) => {
+      state.showSuggestion = action.payload;
     },
     clearSuggestion: (state, action) => {
       state.showSuggestion = action.payload;

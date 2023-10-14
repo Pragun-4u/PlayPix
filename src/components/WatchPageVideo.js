@@ -20,7 +20,7 @@ const WatchPageVideo = () => {
     dispatch(clearMenu());
   }, [SearchParams]);
   return (
-    <div className=" mx-28 my-8 w-[52rem]">
+    <div className="mx-28 my-8 w-[52rem]">
       <iframe
         className=" rounded-3xl"
         width="900"

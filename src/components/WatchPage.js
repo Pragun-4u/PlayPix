@@ -12,7 +12,7 @@ const WatchPage = () => {
   }, []);
 
   return (
-    <div className="flex w-full relative z-0">
+    <div className="flex w-full absolute top-10">
       <WatchPageVideo />
       <div className="mt-6 w-full">
         <LiveChatBox />

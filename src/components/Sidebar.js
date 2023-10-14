@@ -24,7 +24,7 @@ const Sidebar = () => {
   // </div>
 
   return (
-    <div className="w-36 p-5 shadow-lg sticky top-10 text-center">
+    <div className="w-36 p-5 shadow-lg fixed z-50 bg-white top-10 text-center">
       <div className="border-b-2">
         <ul className="mb-2">
           <Link to="/">
