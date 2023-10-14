@@ -12,7 +12,8 @@ const SearchResultPage = () => {
   const [searchParam] = useSearchParams();
   const [videoInfo] = useVideoSearchResult();
   const dispatch = useDispatch();
-  dispatch(clearMenu(true));
+  const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
+  // dispatch(clearMenu(true));
 
   useEffect(() => {
     dispatch(clearResults());
@@ -23,7 +24,11 @@ const SearchResultPage = () => {
 
   // console.log(videoInfo);
   return (
-    <div>
+    <div
+      className={`relative md:border md:z-10 border-red-200 md:w-3/5 md:left-60 top-10 ${
+        isMenuOpen ? "-z-10" : "z-10"
+      }`}
+    >
       {videoInfo?.length === 0 ? (
         <ShimmerSearchResult />
       ) : (

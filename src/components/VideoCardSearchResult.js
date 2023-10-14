@@ -10,28 +10,28 @@ const VideoCardSearchResult = ({ info }) => {
 
   return (
     <>
-      <div>
+      <div className="w-full">
         {videoId === undefined ? null : (
           <Link to={"/watch?v=" + videoId}>
-            <div className=" flex my-8 mx-14 h-40 w-[60rem] bg-gray-100 shadow-xl rounded-xl cursor-pointer hover:bg-transparent ">
-              <div className=" justify-around my-1 mx-2">
+            <div className="md:flex my-8 flex-wrap w-screen md:w-full  bg-gray-100 shadow-xl rounded-xl cursor-pointer hover:bg-transparent ">
+              <div className="md:w-60 flex w-screen">
                 <img
-                  className=" w-auto h-36 rounded-lg"
+                  className="w-[100vw] rounded-lg"
                   src={thumbnails?.medium?.url}
                 />
               </div>
-              <div className="mx-1">
-                <h1 className=" font-bold text-xl">{title}</h1>
+              <div className="mx-5 md:w-80 overflow-hidden">
+                <span className="font-bold text-lg">{title}</span>
                 <div className="flex">
                   <img
-                    className="h-8  pt-2 col-span-1 "
+                    className="h-8 w-fit pt-2 col-span-1 "
                     src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png"
                     alt="User Icon"
                   ></img>
-                  <h6 className="mx-1 my-1 text-lg">{channelTitle}</h6>
+                  <span className="mx-1 my-1 text-lg">{channelTitle}</span>
                 </div>
-                <h1>{new Date(publishedAt).toLocaleDateString()}</h1>
-                <span className="italic text-sm">{description}</span>
+                <h6>{new Date(publishedAt).toLocaleDateString()}</h6>
+                <span className="italic text-sm ">{description}</span>
               </div>
             </div>
           </Link>

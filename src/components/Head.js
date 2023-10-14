@@ -46,14 +46,17 @@ const Head = () => {
 
   return (
     <div className="relative top-0">
-      <div className=" md:flex flex-wrap w-[100vw] fixed top-0  z-50 bg-white p-2  shadow-lg">
+      <div className=" md:flex flex-wrap w-screen fixed top-0  z-50 bg-white p-2  shadow-lg">
         <div className="flex">
           <div className="flex mx-4">
             {showfullwidth && (
               <div className="md:hidden mt-1">
                 <button
                   className="rounded-full mt-1 p-1 bg-slate-300"
-                  onClick={() => setshowfullwidth(false)}
+                  onClick={() => {
+                    setshowfullwidth(false);
+                    dispatch(toggleSuggestion());
+                  }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +184,7 @@ const Head = () => {
           </div>
           <div className="flex">
             <img
-              className="h-9 px-2 pt-2  "
+              className="h-9 px-2 pt-2   "
               src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png"
               alt="User Icon"
             />
