@@ -1,5 +1,11 @@
 {
   "projects": {
     "default": "playpix-by-pragun"
-  }
+  },
+  "rewrites": [
+    {
+      "source": "**",
+      "destination": "/index.html"
+    }
+  ]
 }
