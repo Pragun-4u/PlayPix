@@ -16,12 +16,12 @@ const VideoCardSearchResult = ({ info }) => {
             <div className="md:flex my-8 flex-wrap w-screen md:w-full  bg-gray-100 shadow-xl rounded-xl cursor-pointer hover:bg-transparent ">
               <div className="md:w-60 flex w-screen">
                 <img
-                  className="w-[100vw] object-contain rounded-lg"
+                  className="mx-4 w-[90vw] md:w-[100vw] object-contain rounded-lg"
                   src={thumbnails?.medium?.url}
                   alt="thumbnail"
                 />
               </div>
-              <div className="mx-5 md:w-80 border border-red-200 w-[100vw] overflow-hidden">
+              <div className="px-4 md:mx-5 md:w-80 w-[100vw] overflow-hidden">
                 <span className="font-bold text-lg">{title}</span>
                 <div className="flex">
                   <img
