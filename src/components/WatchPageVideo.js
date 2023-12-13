@@ -127,8 +127,8 @@ const WatchPageVideo = () => {
             </button>
           )}
           {showDesc && (
-            <div className="bg-gray-100 p-2 rounded-lg shadow-lg mx-2">
-              <p className="  text-xs md:text-md  pt-2">
+            <div className="bg-gray-100  overflow-hidden md:max-w-4xl  p-2 rounded-lg shadow-lg mx-2">
+              <p className="text-xs md:text-md  pt-2">
                 {snippet?.localized?.description}
               </p>
               <p>

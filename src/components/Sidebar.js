@@ -69,6 +69,20 @@ const Sidebar = () => {
           Liked videos
         </li>
       </ul>
+      <ul className="mt-4">
+        <li className=" text-center p-2 hover:bg-gray-200 rounded-md">
+          Library{" "}
+        </li>
+        <li className=" text-center p-2 hover:bg-gray-200 rounded-md">
+          History
+        </li>
+        <li className=" text-center p-2 hover:bg-gray-200 rounded-md">
+          Watch Later{" "}
+        </li>
+        <li className=" text-center p-2 hover:bg-gray-200 rounded-md">
+          Liked videos
+        </li>
+      </ul>
     </div>
   );
 };

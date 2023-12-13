@@ -120,7 +120,7 @@ const Head = () => {
                   dispatch(toggleSuggestion(true));
                 }}
                 onBlur={(e) => {
-                  console.log(e.relatedTarget);
+                  // console.log(e.relatedTarget);
                   if (e.relatedTarget === null) {
                     dispatch(toggleSuggestion(false));
                   } else {
@@ -138,6 +138,7 @@ const Head = () => {
                 onClick={() => navigate("/results?searchquery=" + searchQuery)}
               >
                 <img
+                  alt="search Icon"
                   className="h-10 md:h-12 cursor-pointer border border-gray-400 bg-gray-100 rounded-r-full"
                   src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-8.png"
                 />

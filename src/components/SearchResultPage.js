@@ -25,7 +25,7 @@ const SearchResultPage = () => {
   // console.log(videoInfo);
   return (
     <div
-      className={`relative md:border md:z-10 border-red-200 md:w-3/5 md:left-60 top-10 ${
+      className={`relative  md:z-10  md:w-3/5 md:left-60 top-10 ${
         isMenuOpen ? "-z-10" : "z-10"
       }`}
     >
