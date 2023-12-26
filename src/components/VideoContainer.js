@@ -23,6 +23,9 @@ const VideoContainer = () => {
         <Shimmer />
       ) : (
         videos.map((video) => {
+          if (video.id === "undefined") {
+            return;
+          }
           return (
             <Link key={video?.id} to={"watch?v=" + video.id}>
               <VideoCard info={video} />
