@@ -15,6 +15,8 @@ const VideoContainer = () => {
     dispatch(clearResults());
   }, []);
 
+  console.log(videos);
+
   return (
     <div className={`flex flex-wrap ${isMenuOpen ? "md:ml-40" : ""}`}>
       {videos?.length === 0 ? (
