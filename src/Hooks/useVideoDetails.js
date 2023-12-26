@@ -4,10 +4,14 @@ const useVideoDetails = () => {
   const [videos, setvideos] = useState([]);
 
   const getVideodata = async () => {
-    const data = await fetch(process.env.REACT_APP_YOUTUBE_API_KEY);
-    const json = await data.json();
+    try {
+      const data = await fetch(process.env.REACT_APP_YOUTUBE_API_KEY);
+      const json = await data.json();
 
-    setvideos(json?.items);
+      setvideos(json?.items);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
