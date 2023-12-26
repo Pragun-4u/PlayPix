@@ -6,6 +6,8 @@ const useVideoDetails = () => {
   const getVideodata = async () => {
     try {
       const data = await fetch(process.env.REACT_APP_YOUTUBE_API_KEY);
+      console.log("from use videoDetails");
+      console.log(data);
       const json = await data.json();
 
       setvideos(json?.items);
