@@ -30,7 +30,7 @@ const Head = () => {
   }, [searchQuery]);
 
   const getSearchSuggestions = async () => {
-    // console.log(searchQuery);
+    console.log(process.env.REACT_APP_YOUTUBE_SUGGESTION_API);
     const data = await fetch(
       process.env.REACT_APP_YOUTUBE_SUGGESTION_API + searchQuery
     );
